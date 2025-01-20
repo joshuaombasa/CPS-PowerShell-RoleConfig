@@ -1,0 +1,46 @@
+# CloudProductivitySolutionsRole.psrc
+
+@{
+    GUID = '12345678-1234-1234-1234-123456789012'
+    Author = 'Joshua Ombasa'
+    CompanyName = 'Cloud Productivity Solutions'
+    Copyright = '(c) 2025 Cloud Productivity Solutions. All rights reserved.'
+    Description = 'This is a sample role capability file for Cloud Productivity Solutions.'
+
+    # Cmdlets that this role capability allows
+    VisibleCmdlets = @(
+        'Get-Process',
+        'Get-Service',
+        @{ Name = 'Restart-Service'; Parameters = @{ Name = 'Force'; ValidateSet = $true } }
+    )
+
+    # Modules that this role capability allows
+    VisibleModules = @('Microsoft.PowerShell.Management', 'Microsoft.PowerShell.Utility')
+
+    # Functions that this role capability allows
+    VisibleFunctions = @()
+
+    # External scripts that this role capability allows
+    VisibleExternalCommands = @()
+
+    # Aliases that this role capability allows
+    VisibleAliases = @('gps', 'gsv')
+
+    # Providers that this role capability allows
+    VisibleProviders = @('FileSystem', 'Registry')
+
+    # Language mode for the session configuration
+    LanguageMode = 'NoLanguage'
+
+    # Scripts that run in the user's session at startup
+    ScriptsToProcess = @()
+
+    # Aliases that the user can use in the session
+    AliasDefinitions = @{}
+
+    # Environment variables that the user can access
+    EnvironmentVariables = @{}
+
+    # Capabilities such as "Remove", "Update", etc.
+    RoleCapabilities = @()
+}
